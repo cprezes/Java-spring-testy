@@ -33,6 +33,8 @@ public class Runner {
 
 		List<Tasks> todoList = taskService.findCurrentTodoList();
 		System.out.println(todoList);
+		
+		
 		baza();
 	}
 
