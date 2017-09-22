@@ -1,5 +1,7 @@
 package com.jsf.spring_kurs1.service;
 
+import  com.jsf.spring_kurs1.model.Util;
+
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -13,11 +15,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
 
 import com.jsf.spring_kurs1.DefaultToDoListStrategy;
 import com.jsf.spring_kurs1.ToDoListStrategy;
 import com.jsf.spring_kurs1.model.Tasks;
+import com.jsf.spring_kurs1.model.Tasks.TaskBulider;
+
+
 
 @Service
 
@@ -51,6 +57,16 @@ public class TaskService {
 
 		return todoList;
 
+	}
+	
+	public void addTask(String subiect, String startdate, String closeDate) {
+		
+	 TaskBulider tasks=	Tasks.New()
+			 .withSubiect("")
+			 .startsOn(Util.createDate(startdate))
+			 .closesOn(Util.createDate(closeDate)).
+			 build();
+			 
 	}
 
 }
