@@ -7,9 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.jsf.spring_kurs1.model.Tasks;
 
-@Service 
+@Service
 public class DefaultToDoListStrategy implements ToDoListStrategy {
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.jsf.spring_kurs1.ToDoListStrategy#createTodoList()
 	 */
 	public List<Tasks> createTodoList() {

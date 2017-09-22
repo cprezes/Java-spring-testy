@@ -12,7 +12,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.jsf.spring_kurs1.model.Tasks;
 import com.jsf.spring_kurs1.service.TaskService;
-import com.mysql.jdbc.ResultSetMetaData;
 
 public class Runner {
 	static ClassPathXmlApplicationContext factory;

@@ -7,9 +7,9 @@ import java.lang.annotation.Target;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
-@Target({ElementType.TYPE , ElementType.FIELD, ElementType.METHOD})
+@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Qualifier
 public @interface ToDoListQualifier {
-ToDoListType strategy();
+	ToDoListType strategy();
 }

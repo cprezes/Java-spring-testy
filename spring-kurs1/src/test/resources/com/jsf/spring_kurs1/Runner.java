@@ -1,4 +1,4 @@
-package com.jsf;
+package com.jsf.spring_kurs1;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,12 +8,10 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.jsf.spring_kurs1.model.Tasks;
 import com.jsf.spring_kurs1.service.TaskService;
-
 
 public class Runner {
 	static ClassPathXmlApplicationContext factory;
@@ -61,5 +59,5 @@ public class Runner {
 			System.out.println("nie wykonano");
 		}
 
-}
 	}
+}

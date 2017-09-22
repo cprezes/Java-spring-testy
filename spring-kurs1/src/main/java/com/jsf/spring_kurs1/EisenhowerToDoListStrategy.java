@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 import com.jsf.spring_kurs1.model.Tasks;
 import com.jsf.spring_kurs1.service.ToDoListQualifier;
 import com.jsf.spring_kurs1.service.ToDoListType;
+
 @Service
-@ToDoListQualifier(strategy=ToDoListType.EISENHOWER)
+@ToDoListQualifier(strategy = ToDoListType.EISENHOWER)
 public class EisenhowerToDoListStrategy implements ToDoListStrategy {
 
 	public List<Tasks> createTodoList() {
