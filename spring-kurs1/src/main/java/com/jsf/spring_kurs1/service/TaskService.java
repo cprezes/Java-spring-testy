@@ -1,27 +1,20 @@
 package com.jsf.spring_kurs1.service;
 
-import  com.jsf.spring_kurs1.model.Util;
-
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
-import javax.validation.Valid;
 
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
 
-import com.jsf.spring_kurs1.DefaultToDoListStrategy;
 import com.jsf.spring_kurs1.ToDoListStrategy;
 import com.jsf.spring_kurs1.model.Tasks;
 import com.jsf.spring_kurs1.model.Tasks.TaskBulider;
+import  com.jsf.spring_kurs1.model.Util;
 
 
 
@@ -35,6 +28,10 @@ public class TaskService {
 	private ApplicationContext context;
 	@Value("${serviceId.default}")
 	private String serviceId;
+	
+	@Autowired
+	private TaskRepository repository;
+	
 	public String getServiceId() {
 		return serviceId;
 	}
@@ -68,5 +65,5 @@ public class TaskService {
 			 build();
 			 
 	}
-
+	
 }

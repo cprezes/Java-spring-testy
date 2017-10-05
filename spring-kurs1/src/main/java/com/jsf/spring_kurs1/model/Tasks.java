@@ -21,7 +21,7 @@ public class Tasks {
 
 	public static TaskBulider New() {
 		return new TaskBulider();
-	}
+	} 
 
 	public static class TaskBulider {
 		private Tasks task;
