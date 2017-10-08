@@ -14,9 +14,7 @@ import org.springframework.stereotype.Service;
 import com.jsf.spring_kurs1.ToDoListStrategy;
 import com.jsf.spring_kurs1.model.Tasks;
 import com.jsf.spring_kurs1.model.Tasks.TaskBulider;
-import  com.jsf.spring_kurs1.model.Util;
-
-
+import com.jsf.spring_kurs1.model.Util;
 
 @Service
 
@@ -28,11 +26,11 @@ public class TaskService {
 	private ApplicationContext context;
 	@Value("${serviceId.default}")
 	private String serviceId;
-	
+
 	@Autowired
 	private TaskRepository repository;
-	
-	public String getServiceId() {
+
+	public String getServiceId() { 
 		return serviceId;
 	}
 
@@ -55,15 +53,12 @@ public class TaskService {
 		return todoList;
 
 	}
-	
+
 	public void addTask(String subiect, String startdate, String closeDate) {
-		
-	 TaskBulider tasks=	Tasks.New()
-			 .withSubiect("")
-			 .startsOn(Util.createDate(startdate))
-			 .closesOn(Util.createDate(closeDate)).
-			 build();
-			 
+
+		TaskBulider tasks = Tasks.New().withSubiect("").startsOn(Util.createDate(startdate))
+				.closesOn(Util.createDate(closeDate)).build();
+
 	}
-	
+
 }

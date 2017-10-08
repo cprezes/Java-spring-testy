@@ -42,7 +42,7 @@ public class Runner {
 		DataSource dataSource = factory.getBean(DataSource.class);
 		System.out.print(dataSource);
 		Connection connection = dataSource.getConnection();
-		Statement statement = connection.createStatement();
+ 		Statement statement = connection.createStatement();
 		if (statement.execute("select * from cds;")) {
 			System.out.println("wykonano");
 			ResultSet resultSet = statement.executeQuery("select * from cds;");

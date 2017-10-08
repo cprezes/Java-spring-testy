@@ -12,6 +12,12 @@
     <property name="username" value="root" />
     <property name="password" value="" />
 </bean>
+<bean id="EntityManager" class= "org.springframework.orm.jpa.AbstractEntityManagerFactoryBean">
+ <property name= "dadasource-ref" value= "dataSource" /> 
+<property name= "persistanceXmlLocation" value= "classpath:META-INF/persistance.xml" /> 
+
+</bean>
+
 
 <context:component-scan base-package="com.jsf.spring_kurs1"></context:component-scan>
 

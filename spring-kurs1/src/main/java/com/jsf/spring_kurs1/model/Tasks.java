@@ -2,13 +2,55 @@ package com.jsf.spring_kurs1.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.springframework.context.support.StaticApplicationContext;
 import org.springframework.scheduling.config.Task;
-
+@Entity
 public class Tasks {
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public static String getSubiect() {
+		return subiect;
+	}
+
+	public void setSubiect(String subiect) {
+		this.subiect = subiect;
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getCloseDate() {
+		return closeDate;
+	}
+
+	public void setCloseDate(Date closeDate) {
+		this.closeDate = closeDate;
+	}
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	private String subiect;
+	@Column(name="interpret")
+	private static String subiect;
+	@Column(name="titel")
 	private Date startDate;
+	@Column(name="jahr")
 	private Date closeDate;
 
 	public Tasks() {
